@@ -13,7 +13,7 @@ create table `Member`(
         `rdate`		datetime not null
 		);
 delete from `Member`;
-
+ 
 #부서 테이블
 create table `Department`(
 		`depNo`		int primary key,

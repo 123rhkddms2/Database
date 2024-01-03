@@ -14,8 +14,8 @@ insert into `user2` values ('A102', '김춘추', '1972-11-12', '경남 경주시
 insert into `user2` values ('A103', '장보고', '1978-03-01', '전남 완도군');
 insert into `user2` values ('A105', '강감찬', '1979-08-16', '서울시 관악구');
 insert into `user2` values ('A106', '이순신', '1981-05-23', '부산시 진구');
-drop table `user2`;
-
+drop table `user2`;   
+ 
 
 
 

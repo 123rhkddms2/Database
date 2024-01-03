@@ -8,7 +8,7 @@ CREATE TABLE `User1` (
     `name`	VARCHAR(10),
     `hp`	CHAR(13),
     `age`	INT
-);
+); 
 
 DROP TABLE `User1`;
 
