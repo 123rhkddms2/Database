@@ -169,7 +169,7 @@ select sum(`sale`) as `총합` from `sales` where `year`=2018 and `month`=1;
 #실습 4-9
 
 #실습 4-10(1,2,3번은 보류 - 에러남)
-select * from `sales` group by `uid`;
+select * from `sales` group by `uid`;   
 select * from `sales` group by `year`;
 select * from `sales` group by `uid`, `year`;
 select `uid`, count(*) as `건수` from `sales` group by `uid`;
