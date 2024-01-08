@@ -166,7 +166,7 @@ create procedure proc_test8()
 begin
 	#변수 선언
     declare total int default 0;
-    declare sale int;
+    declare price int;
     declare endOfRow boolean default false;
     
     #커서 선언 
@@ -181,13 +181,13 @@ begin
     open salesCursor;
     
     cursor_loop: Loop
-		fetch salescursor into sale;
+		fetch salescursor into price;
         
         if endofrow then
 			leave cursor_loop;
 		end if;
         
-        set total = total + sale;
+        set total = total + price;
 	end loop;
     
     select total as '전체 합계';
