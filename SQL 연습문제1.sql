@@ -5,7 +5,8 @@
 #실습 1-1
 CREATE DATABASE `Shop`;
 CREATE USER 'shop'@'%' IDENTIFIED BY '1234';
-GRANT ALL PRIVILEGES ON Shop.* to 'shop'@'%';
+GRANT ALL PRIVILEGES ON `Shop`.* to 'shop'@'%';
+GRANT ALL PRIVILEGES ON `Shop`.* to '123rhkddms2'@'%';
 FLUSH PRIVILEGES;
 
 #실습1-2
