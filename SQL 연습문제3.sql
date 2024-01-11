@@ -6,7 +6,7 @@
 CREATE DATABASE `College`;
 CREATE USER 'college'@'%' identified by '1234';
 GRANT ALL PRIVILEGES ON `College`.* TO 'college'@'%';
-GRANT ALL PRIVILEGES ON `College`.* TO 'chhak'@'%';
+GRANT ALL PRIVILEGES ON `College`.* TO '123rhkddms2'@'%';
 FLUSH privileges;
 
 #실습3-2
