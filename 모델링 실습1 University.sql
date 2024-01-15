@@ -99,16 +99,18 @@ FROM `lectures` as a,
 where a.`proNo` = b.`proNo`;
 
 #문제 4
-SELECT
-	`lecNo`,
-    `lecName`,
-    `prodNo`,
-    `prodName`,
-    `proHp`
+select
+	`lecNo`, 
+    `lecName`, 
+    b.`proNo`, 
+    `proName`, 
+    `proHp`, 
+    c.`depNo`,
+    `depName`
 FROM `lectures` as a,
 	`professors` as b,
     `departments` as c
-where a.`proNo` = b.`proNo` and b.`depNo` = c.`depNo`;
+where a.proNo = b.proNo and b.depNo = c.depNo;
 
 #문제 5
 select
