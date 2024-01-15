@@ -4,7 +4,7 @@
 
 #실습2-1
 CREATE DATABASE `Bank`;
-CREATE USER 'bank'@'%' IDENTIFIED BY '1234';
+CREATE USER 'bank'@'%' IDENTIFIED BY '1234'; 
 GRANT ALL PRIVILEGES ON `Bank`.* TO 'bank'@'%';
 GRANT ALL PRIVILEGES ON `Bank`.* TO '123rhkddms2'@'%';
 GRANT ALL PRIVILEGES ON `Shop`.* TO '123rhkddms2'@'%';
