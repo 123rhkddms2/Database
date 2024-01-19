@@ -208,9 +208,66 @@ END $$
 DELIMITER ;
 CALL ifProc2();
 
-#손코딩 p191
-#손코딩 p191
-#손코딩 p191
+DROP PROCEDURE IF EXISTS ifProc3;
+DELIMITER $$
+CREATE PROCEDURE ifProc3()
+BEGIN
+	DECLARE debutDate DATE;
+    DECLARE curDate Date;
+    DECLARE days INT;
+    SELECT debut_date INTO debutDate
+		FROM market_db.member
+        WHERE mem_id = 'APN';
+	SET curDATE = CURRENT_DATE();
+    SET days = datediff(curDATE, debutDate);
+    
+    IF (days/365) >=5 THEN
+		SELECT CONCAT('데뷔한 지 ', + days + '일이나 지났습니다. 핑순이들 축하합니다.!');
+	ELSE
+		SELECT '데뷔한 지 ' + days + '일밖에 안되었네요. 핑순이들 화이팅~';
+	END IF;
+END $$
+DELIMITER ;
+CALL ifProc3();
+
+#손코딩 p202
+DROP PROCEDURE IF EXISTS caseProc;
+DELIMITER $$
+CREATE procedure caseproc()
+begin
+	declare point INT;
+    declare credit CHAR(1);
+    SET point = 88;
+    
+    CASE
+		WHEN point >= 90 then
+			set credit = 'A';
+		WHEN point >= 80 then
+			set credit = 'B';
+		WHEN point >= 70 then
+			set credit = 'C';
+		WHEN point >= 60 then
+			set credit = 'D';
+		else
+			set credit = 'F';
+	END CASE;
+    select concat('취득점수==>', point), concat('학점==>', credit);
+end $$
+delimiter ;
+call caseProc();
+
+#손코딩 p204
+select mem_id, sum(price*amount) "총구매액"
+	from buy
+    group by mem_id;
+    
+select mem_id, sum(price*amount) "총구매액"
+	from buy
+    group by mem_id
+    order by sum(price*amount) desc;
+
+
+
 #손코딩 p191
 #손코딩 p191
 #손코딩 p191
