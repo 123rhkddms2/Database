@@ -26,7 +26,7 @@ CREATE TABLE `User` (
 );
 
 CREATE TABLE `Article` (
-	`no`			INT PRIMARY KEY,
+	`no`			INT PRIMARY KEY AUTO_INCREMENT,
 	`parent`		INT DEFAULT 0,
 	`comment`	INT DEFAULT 0,
 	`cate`		VARCHAR(20) DEFAULT 'free',
@@ -39,7 +39,7 @@ CREATE TABLE `Article` (
 	`rdate`		DATETIME NOT NULL,
 	FOREIGN KEY(`writer`) REFERENCES `User` (`uid`)	
 );
-jboardarticletermsterms
+
 CREATE TABLE `File` (
 	`fno`			INT AUTO_INCREMENT PRIMARY KEY,
 	`ano`			INT NOT NULL,
