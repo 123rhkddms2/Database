@@ -28,7 +28,7 @@ CREATE TABLE `User` (
 CREATE TABLE `Article` (
 	`no`			INT PRIMARY KEY AUTO_INCREMENT,
 	`parent`		INT DEFAULT 0,
-	`comment`	INT DEFAULT 0,
+	`comment`	INT DEFAULT 0,jboarduser
 	`cate`		VARCHAR(20) DEFAULT 'free',
 	`title`		VARCHAR(100),
 	`content`	TEXT NOT NULL,
@@ -53,4 +53,4 @@ CREATE TABLE `File` (
 CREATE TABLE `Terms` (
 	`terms`		TEXT,
 	`privacy`	TEXT
-);
+);termsuser1
